@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Trivia Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div id="start">Ready to begin?</div>
+            <div id="quiz" style="display: none">
+                    <div id="question"></div>
+                    <div id="qImg"></div>
+                    <div id="choices">
+                        <div class="choiceA" id = "A" onclick="checkAnswer('A')"></div>
+                        <div class="choiceB" id = "B" onclick="checkAnswer('B')"></div>
+                        <div class="choiceC" id = "C" onclick="checkAnswer('C')"></div>
+                        <div class="choiceD" id = "D" onclick="checkAnswer('D')"></div>
+                    </div>
+                    <div id="timer">
+                        <div id="counter"></div>
+                        <div id="btimeGauge"></div>
+                        <div id="timeGauge"></div>
+                    </div>
+                    <div id="progress"></div>
+            </div>
+           <div id="score" style="display: none"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
