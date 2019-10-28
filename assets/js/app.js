@@ -29,12 +29,12 @@ let questions= [
 //Variables
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
-// let count = 0;
-// const questionTime = 10;
-// const gaugeWidth = 150;
-// const gaugeUnit = gaugeUnit / questionTime;
-// let timer;
-// let score = 0;
+let count = 0;
+const questionTime = 10;
+const gaugeWidth = 150;
+const gaugeUnit = gaugeWidth / questionTime;
+let timer;
+let score = 0;
 
 
 //Render Questions
@@ -50,30 +50,49 @@ const renderQuestion = () => {
     console.log(q);
 }
 
-// const renderProgress = () => {
-//     for (let i = 0; i < lastQuestion; i++) {
-//         progress.html += "<div class='prog' id = " + i + "</div>";
-//     }
-// }
+const renderProgress = () => {
+    for (let i = 0; i < lastQuestion; i++) {
+        progress.html += "<div class='prog' id = " + i + "</div>";
+    }
+}
 
-// const renderCounter = () => {
-//     if(count <= questionTime){
-//         counter.html = count;
-//         timeGauge.css("width", count * gaugeUnit +"px");
-//         count++;
-//     }else{
-//         count = 0;
-//     }
-// }
+const renderCounter = () => {
+    if(count <= questionTime){
+        counter.html = count;
+        timeGauge.css("width", count * gaugeUnit +"px");
+        count++;
+    }else{
+        count = 0;
+    }
+}
 
+const checkAnswer = (answer) => {
+ if(answer === question.correct){
+     score++;
+     answerCorrect();
+ }
+ 
+ count = 0;
+ if(runningQuestion < lastQuestion){
+     runningQuestion++;
+     renderQuestion();
+ }else{
+     clearInterval(timer);
+     scoreRender();
+ }
+}
+
+const answerCorrect = () => {
+
+}
 
 //Start the quiz
 $("#start").on("click", function(){
     start.css("display", "none");
     renderQuestion();
     quiz.css("display", "block");
-    // renderProgress();
-    // renderCounter();
-    // timer = setInterval(renderCounter, 1000);
+    renderProgress();
+    renderCounter();
+    timer = setInterval(renderCounter, 1000);
 });
 // renderQuestion();
