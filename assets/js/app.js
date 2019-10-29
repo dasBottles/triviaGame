@@ -23,6 +23,24 @@ let questions= [
         choiceD:"Pear",
         correct:"Raspberry",
     },
+    {
+        question:"In the culinary world, what does MSG stand for?",
+        imgSrc:"https://www.thehealthy.com/wp-content/uploads/2018/08/What-is-MSG%E2%80%94And-How-Bad-Is-It-Really-760x506.jpg",
+        choiceA:"Massage",
+        choiceB:"Mmm, so good",
+        choiceC:"Monosodium glutamate",
+        choiceD:"Message",
+        correct:"Monosodium glutamate",
+    },
+    {
+        question:"Who was the 35th president of the United States?",
+        imgSrc:"https://i.imgflip.com/12wxqp.jpg",
+        choiceA:"Abraham Lincoln",
+        choiceB:"John F. Kennedy",
+        choiceC:"Herbert Hoover",
+        choiceD:"Ronald Reagan",
+        correct:"John F. Kennedy",
+    },
     
     ];
     
@@ -70,6 +88,8 @@ const checkAnswer = (answer) => {
  if(answer === question.correct){
      score++;
      answerCorrect();
+ }else{
+
  }
  
  count = 0;
