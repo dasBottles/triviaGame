@@ -9,30 +9,34 @@
         <title>Trivia Game</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
     <body>
         <div id="container">
+          <div id="quiz-container" class='quizBackground'>
             <div id="start">Ready to begin?</div>
-            <div id="quiz" style="display: none">
-                    <div id="question"></div>
-                    <div id="qImg"></div>
-                    <div id="choices">
-                        <div class="choice" id = "A" onclick="checkAnswer('A')"></div>
-                        <div class="choice" id = "B" onclick="checkAnswer('B')"></div>
-                        <div class="choice" id = "C" onclick="checkAnswer('C')"></div>
-                        <div class="choice" id = "D" onclick="checkAnswer('D')"></div>
-                    </div>
-                    <div id="timer">
-                        <div id="counter"></div>
-                        <div id="btimeGauge"></div>
-                        <div id="timeGauge"></div>
-                    </div>
-                    <div id="progress"></div>
+            <div id="quiz">
+              <div class="left-column">
+                <div id="qImg"></div>
+                <div id="timer">
+                  <div id="counter"></div>
+                  <div id="btimeGauge"></div>
+                  <div id="timeGauge"></div>
+                  <div id="progress"></div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div id="question"></div>
+               <div id="choices">
+                  <div class="choice" id = "choiceA" onclick="checkAnswer('A')"></div>
+                  <div class="choice" id = "choiceB" onclick="checkAnswer('B')"></div>
+                  <div class="choice" id = "choiceC" onclick="checkAnswer('C')"></div>
+                  <div class="choice" id = "choiceD" onclick="checkAnswer('D')"></div>
+                </div>
+              </div>
             </div>
-           <div id="score" style="display: none"></div>
+          </div>
         </div>
 
 
